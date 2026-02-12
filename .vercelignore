@@ -1,0 +1,12 @@
+# Ignore root PHP files so Vercel does not serve them as static (download).
+# Only api/*.php are run as serverless functions; rewrites send requests there.
+/index.php
+/sobre.php
+/servicos.php
+/contato.php
+/especialistas.php
+/diagnostico-empresarial.php
+/reestruturacao-financeira.php
+/turnaround.php
+/governanca-sucessao.php
+/captacao-estrategia-saida.php

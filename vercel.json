@@ -1,15 +1,8 @@
 {
   "functions": {
-    "api/index.php": { "runtime": "vercel-php@0.7.1" },
-    "api/sobre.php": { "runtime": "vercel-php@0.7.1" },
-    "api/servicos.php": { "runtime": "vercel-php@0.7.1" },
-    "api/contato.php": { "runtime": "vercel-php@0.7.1" },
-    "api/especialistas.php": { "runtime": "vercel-php@0.7.1" },
-    "api/diagnostico-empresarial.php": { "runtime": "vercel-php@0.7.1" },
-    "api/reestruturacao-financeira.php": { "runtime": "vercel-php@0.7.1" },
-    "api/turnaround.php": { "runtime": "vercel-php@0.7.1" },
-    "api/governanca-sucessao.php": { "runtime": "vercel-php@0.7.1" },
-    "api/captacao-estrategia-saida.php": { "runtime": "vercel-php@0.7.1" }
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.1"
+    }
   },
   "rewrites": [
     { "source": "/", "destination": "/api/index.php" },
