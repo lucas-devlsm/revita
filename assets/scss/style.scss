@@ -1,21 +1,26 @@
-// ========================================
-// Variables
-// ========================================
-$color-golden: #DBC377;
-$color-blue: #0E091E;
+// REVITA — Site institucional
+// Paleta: #283052 (azul base), #3F9042 (verde), #ABD358 (verde claro), #D8D9DA (cinza), branco
+
+$color-base: #283052;
+$color-base-hover: #1e2440;
+$color-green: #3F9042;
+$color-green-light: #ABD358;
+$color-gray: #D8D9DA;
+$color-gray-bg: #f5f6f7;
 $color-white: #ffffff;
-$color-text: #333333;
-$color-text-light: #666666;
+$color-text: #283052;
+$color-text-muted: #5a5f7a;
 
-$font-primary: 'Raleway', sans-serif;
-$font-heading: 'Raleway', sans-serif;
+$font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
 
-$container-max-width: 1200px;
-$container-padding: 20px;
+$container: 960px;
+$container-narrow: 720px;
+$container-padding: 24px;
+$header-height: 72px;
 
-// ========================================
-// Reset & Base
-// ========================================
+$radius: 4px;
+$transition: 0.2s ease;
+
 * {
     margin: 0;
     padding: 0;
@@ -24,162 +29,116 @@ $container-padding: 20px;
 
 html {
     scroll-behavior: smooth;
-    
-    // Custom Scrollbar - Webkit browsers (Chrome, Safari, Edge)
+    scrollbar-width: thin;
+    scrollbar-color: $color-base rgba($color-base, 0.12);
     &::-webkit-scrollbar {
-        width: 8px;
-        
-        @media (max-width: 968px) {
-            width: 6px;
-        }
+        width: 10px;
+        height: 10px;
     }
-    
     &::-webkit-scrollbar-track {
-        background: rgba($color-blue, 0.1);
+        background: rgba($color-base, 0.06);
     }
-    
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, $color-golden 0%, darken($color-golden, 10%) 100%);
-        border-radius: 4px;
-        border: 1px solid rgba($color-blue, 0.1);
-        
+        background: $color-base;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        background-clip: padding-box;
         &:hover {
-            background: linear-gradient(180deg, darken($color-golden, 5%) 0%, darken($color-golden, 15%) 100%);
+            background: $color-base-hover;
+            background-clip: padding-box;
         }
     }
 }
 
 body {
     font-family: $font-primary;
+    font-weight: 400;
+    font-size: 16px;
     color: $color-text;
     line-height: 1.6;
-    overflow-x: hidden;
-    font-weight: 400;
-    
-    // Custom Scrollbar - Firefox
-    scrollbar-width: thin;
-    scrollbar-color: $color-golden rgba($color-blue, 0.1);
+    background: $color-white;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: $container-max-width;
+    max-width: $container;
     margin: 0 auto;
     padding: 0 $container-padding;
-    
-    @media (max-width: 576px) {
-        padding: 0 15px;
+}
+
+.container--header {
+    max-width: $container + 48px;
+}
+
+.container--hero {
+    max-width: $container;
+}
+
+a {
+    color: $color-green;
+    text-decoration: none;
+    transition: color $transition;
+    &:hover {
+        color: $color-base;
+    }
+    &:focus-visible {
+        outline: 2px solid $color-green;
+        outline-offset: 2px;
     }
 }
 
-// ========================================
-// Buttons
-// ========================================
 .btn {
     display: inline-block;
-    padding: 14px 32px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    padding: 14px 28px;
+    font-family: $font-primary;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-radius: $radius;
     cursor: pointer;
-    font-size: 16px;
-    
+    transition: background $transition, color $transition, transform $transition;
+    &:focus-visible {
+        outline: 2px solid $color-base;
+        outline-offset: 2px;
+    }
     &--primary {
-        background-color: $color-golden;
-        color: $color-blue;
-        
+        background: $color-base;
+        color: $color-white;
         &:hover {
-            background-color: darken($color-golden, 10%);
-            transform: translateY(-2px);
+            background: $color-base-hover;
         }
     }
-    
-    &--secondary {
-        background-color: transparent;
-        color: $color-golden;
-        border-color: $color-golden;
-        
+    &--light {
+        background: $color-white;
+        color: $color-base;
         &:hover {
-            background-color: $color-golden;
-            color: $color-blue;
+            background: $color-gray-bg;
+            color: $color-base;
+        }
+    }
+    &--outline {
+        background: transparent;
+        color: $color-base;
+        border: 2px solid $color-base;
+        &:hover {
+            background: $color-base;
+            color: $color-white;
         }
     }
 }
 
-// ========================================
-// Section Title
-// ========================================
-.section__header {
-    text-align: center;
-    margin-bottom: 4rem;
-    animation: fadeInUp 0.8s ease-out;
-    
-    @media (max-width: 768px) {
-        margin-bottom: 3rem;
-    }
-}
-
-.section__title {
-    font-family: $font-heading;
-    font-size: 2.75rem;
-    color: $color-blue;
-    margin-bottom: 1.25rem;
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    
-    &--golden {
-        color: $color-golden;
-    }
-    
-    @media (max-width: 768px) {
-        font-size: 2.25rem;
-        margin-bottom: 1rem;
-    }
-}
-
-.section__divider {
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, $color-golden, transparent);
-    margin: 0 auto 1.5rem;
-    border-radius: 2px;
-    
-    @media (max-width: 768px) {
-        width: 50px;
-        height: 2px;
-        margin-bottom: 1.25rem;
-    }
-}
-
-.section__subtitle {
-    font-size: 1.1rem;
-    color: $color-text-light;
-    font-weight: 400;
-    margin: 0 auto;
-    max-width: 600px;
-    line-height: 1.6;
-    
-    @media (max-width: 768px) {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-}
-
-// ========================================
-// Import Sections
-// ========================================
 @import 'header';
 @import 'hero';
-@import 'footer';
-@import 'floating-buttons';
-@import 'nova-section';
-@import 'breadcrumb';
+@import 'ticker';
+@import 'sections';
+@import 'page-hero';
+@import 'page-content';
+@import 'especialistas';
 @import 'sobre';
-@import 'holding-familiar';
-@import 'sessao-viabilidade';
-@import 'seminario';
-@import 'contato';
-@import 'materiais';
-@import 'faq';
+@import 'contact-form';
+@import 'footer';
+@import 'scroll-top';

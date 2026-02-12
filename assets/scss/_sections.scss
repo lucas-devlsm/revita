@@ -1,0 +1,496 @@
+.section {
+    padding: 88px 0;
+    @media (max-width: 768px) {
+        padding: 56px 0;
+    }
+}
+
+.section--light {
+    background: $color-gray-bg;
+}
+
+// Atuação section — fundo azul da paleta (#283052)
+.section--atuacao {
+    position: relative;
+    overflow: hidden;
+    background: $color-base;
+    color: $color-white;
+    padding: 100px 0;
+    @media (max-width: 768px) {
+        padding: 64px 0;
+    }
+}
+
+.section--atuacao .section__accent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, $color-green 0%, $color-green-light 100%);
+    pointer-events: none;
+    @media (max-width: 768px) {
+        width: 3px;
+    }
+}
+
+.section--atuacao .section__accent--right {
+    left: auto;
+    right: 0;
+}
+
+.section--atuacao .section__label {
+    color: rgba($color-white, 0.65);
+    letter-spacing: 0.16em;
+    margin-bottom: 14px;
+}
+
+.atuacao__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px 72px;
+    align-items: start;
+    max-width: 100%;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.atuacao__left {
+    min-width: 0;
+}
+
+.atuacao__title {
+    margin-bottom: 24px;
+    max-width: 14ch;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #ffffff !important;
+    @media (max-width: 768px) {
+        font-size: 1.625rem;
+        max-width: none;
+    }
+}
+
+.atuacao__lead {
+    font-size: 1.0625rem;
+    color: rgba($color-white, 0.88);
+    line-height: 1.65;
+    margin: 0;
+    max-width: 28em;
+}
+
+.atuacao__cta {
+    margin: 28px 0 0;
+    text-align: left;
+    @media (max-width: 768px) {
+        margin-top: 24px;
+    }
+}
+
+.atuacao__right {
+    min-width: 0;
+}
+
+.section--atuacao .btn--atuacao {
+    background: $color-white;
+    color: $color-base;
+    &:hover {
+        background: rgba($color-white, 0.92);
+        color: $color-base;
+    }
+}
+
+.atuacao__pillars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid rgba($color-white, 0.12);
+    border-radius: $radius;
+    overflow: hidden;
+    background: rgba($color-white, 0.04);
+}
+
+.atuacao__pillar {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 26px 28px;
+    border-bottom: 1px solid rgba($color-white, 0.1);
+    transition: padding-left $transition, background $transition;
+    &:first-child {
+        padding-top: 26px;
+    }
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 26px;
+    }
+    &:hover {
+        padding-left: 32px;
+        background: rgba($color-white, 0.08);
+    }
+    &:hover .atuacao__pillar-num {
+        color: $color-green-light;
+    }
+    @media (max-width: 768px) {
+        padding: 20px 22px;
+        gap: 18px;
+        &:first-child { padding-top: 20px; }
+        &:last-child { padding-bottom: 20px; }
+        &:hover { padding-left: 24px; }
+    }
+}
+
+.atuacao__pillar-num {
+    flex-shrink: 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: $color-green-light;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    transition: color $transition;
+}
+
+.atuacao__pillar-text {
+    font-size: 1rem;
+    color: rgba($color-white, 0.9);
+    line-height: 1.6;
+}
+
+.section--accent {
+    background: $color-base;
+    color: $color-white;
+    .section__label--light,
+    .section__title--light {
+        color: $color-white;
+    }
+    .section__contact-text,
+    .contact-link {
+        color: rgba($color-white, 0.9);
+    }
+    .contact-link:hover {
+        color: $color-white;
+    }
+}
+
+// Contato section — layout em duas colunas + card de contato
+.section--contato {
+    position: relative;
+    overflow: hidden;
+    padding: 88px 0 96px;
+    @media (max-width: 768px) {
+        padding: 56px 0 64px;
+    }
+}
+
+.section--contato .section__accent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, $color-green 0%, $color-green-light 100%);
+    pointer-events: none;
+    z-index: 0;
+    @media (max-width: 768px) {
+        width: 3px;
+    }
+}
+
+.section--contato .section__accent--right {
+    left: auto;
+    right: 0;
+}
+
+.contato-home__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 64px;
+    align-items: start;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.contato-home__left {
+    min-width: 0;
+}
+
+.contato-home__text {
+    font-size: 1.0625rem;
+    color: rgba($color-white, 0.9);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 28em;
+    @media (max-width: 768px) {
+        margin-bottom: 24px;
+    }
+}
+
+.contato-home__cta {
+    margin-top: 0;
+}
+
+.contato-home__right {
+    min-width: 0;
+}
+
+.contato-home__card {
+    background: rgba($color-white, 0.08);
+    border: 1px solid rgba($color-white, 0.15);
+    border-radius: $radius;
+    padding: 28px 30px;
+    @media (max-width: 768px) {
+        padding: 24px 26px;
+    }
+}
+
+.contato-home__item {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba($color-white, 0.1);
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.contato-home__label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba($color-white, 0.6);
+    margin-bottom: 6px;
+}
+
+.contato-home__link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-white;
+    text-decoration: none;
+    transition: color $transition;
+    &:hover {
+        color: $color-green-light;
+    }
+    &:focus-visible {
+        outline: 2px solid $color-green-light;
+        outline-offset: 2px;
+    }
+}
+
+.section__label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: $color-text-muted;
+    margin-bottom: 12px;
+}
+
+.section__label--light {
+    color: rgba($color-white, 0.7);
+}
+
+.section__title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: $color-base;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    max-width: 20ch;
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        margin-bottom: 22px;
+        max-width: none;
+    }
+}
+
+.section__title--light {
+    color: $color-white;
+}
+
+.section__content {
+    max-width: 42em;
+}
+
+.section__content--prose p {
+    font-size: 1.0625rem;
+    color: $color-text;
+    margin-bottom: 16px;
+    line-height: 1.65;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section__link-wrap {
+    margin-top: 28px;
+}
+
+.section__intro {
+    font-size: 1rem;
+    color: $color-text-muted;
+    margin: -8px 0 32px;
+    max-width: 32em;
+}
+
+.link-arrow {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    &::after {
+        content: '→';
+    }
+}
+
+// Serviços section — cards com título + descrição
+.section--servicos {
+    background: $color-gray-bg;
+    padding: 88px 0 96px;
+    @media (max-width: 768px) {
+        padding: 56px 0 64px;
+    }
+}
+
+.section--servicos__intro {
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+        margin-bottom: 32px;
+    }
+}
+
+.section--servicos__cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.servicos-cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+.servicos-cards__item {
+    margin: 0;
+}
+
+.servicos-card {
+    display: block;
+    padding: 28px 26px;
+    background: $color-white;
+    border: 1px solid $color-gray;
+    border-radius: $radius;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color $transition, box-shadow $transition, transform $transition;
+    height: 100%;
+    &:hover {
+        border-color: rgba($color-base, 0.25);
+        box-shadow: 0 8px 24px rgba($color-base, 0.08);
+        transform: translateY(-2px);
+    }
+    &:focus-visible {
+        outline: 2px solid $color-green;
+        outline-offset: 2px;
+    }
+    @media (max-width: 768px) {
+        padding: 22px 20px;
+    }
+}
+
+.servicos-card__title {
+    display: block;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: $color-base;
+    margin-bottom: 10px;
+    transition: color $transition;
+}
+
+.servicos-card:hover .servicos-card__title {
+    color: $color-green;
+}
+
+.servicos-card__desc {
+    display: block;
+    font-size: 0.9375rem;
+    color: $color-text-muted;
+    line-height: 1.55;
+}
+
+// Legacy grid (kept for any other use)
+.services-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1px;
+    background: $color-gray;
+    border: 1px solid $color-gray;
+    border-radius: $radius;
+    overflow: hidden;
+    max-width: 640px;
+}
+
+.services-grid__item {
+    padding: 20px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-text;
+    background: $color-white;
+    transition: background $transition, color $transition;
+    &:hover {
+        background: $color-gray-bg;
+        color: $color-base;
+    }
+}
+
+.section__contact-text {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.section__contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-bottom: 28px;
+}
+
+.contact-link {
+    font-size: 1rem;
+    color: $color-white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    &:hover {
+        color: $color-green-light;
+    }
+}
+
+.section__cta {
+    margin-top: 0;
+}

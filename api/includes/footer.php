@@ -3,8 +3,8 @@
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__brand">
-                    <a href="./" class="footer__logo" aria-label="REVITA - Página inicial">
-                        <img src="assets/img/logo.png" alt="REVITA" class="footer__logo-img" width="100" height="34">
+                    <a href="/" class="footer__logo" aria-label="REVITA - Página inicial">
+                        <img src="/assets/img/logo.png" alt="REVITA" class="footer__logo-img" width="100" height="34">
                     </a>
                     <!-- <p class="footer__tagline">Estratégia, finanças e turnaround.</p> -->
                 </div>
@@ -12,11 +12,11 @@
                     <span class="footer__nav-title">Navegação</span>
                     <nav aria-label="Rodapé">
                         <ul class="footer__links">
-                            <li><a href="./">Home</a></li>
-                            <li><a href="sobre">Sobre</a></li>
-                            <li><a href="especialistas">Especialistas</a></li>
-                            <li><a href="servicos">Serviços</a></li>
-                            <li><a href="contato">Contato</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/sobre">Sobre</a></li>
+                            <li><a href="/especialistas">Especialistas</a></li>
+                            <li><a href="/servicos">Serviços</a></li>
+                            <li><a href="/contato">Contato</a></li>
                         </ul>
                     </nav>
                 </div>

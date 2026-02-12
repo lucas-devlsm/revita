@@ -1,0 +1,282 @@
+// Página Sobre — várias seções bem estilizadas
+
+.sobre-section {
+    padding: 64px 0 72px;
+    @media (max-width: 768px) {
+        padding: 48px 0 56px;
+    }
+}
+
+.sobre-section--intro {
+    padding-top: 48px;
+    padding-bottom: 56px;
+    @media (max-width: 768px) {
+        padding-top: 40px;
+        padding-bottom: 44px;
+    }
+}
+
+.sobre-section--light {
+    background: $color-gray-bg;
+}
+
+.sobre-section--accent {
+    background: $color-base;
+    color: $color-white;
+    padding: 56px 0 64px;
+    @media (max-width: 768px) {
+        padding: 44px 0 52px;
+    }
+}
+
+.sobre-section--cta {
+    padding: 56px 0 80px;
+    text-align: center;
+    @media (max-width: 768px) {
+        padding: 44px 0 64px;
+    }
+}
+
+.sobre-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-base;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+        font-size: 1.375rem;
+        margin-bottom: 16px;
+    }
+}
+
+.sobre-section--accent .sobre-section__title {
+    color: $color-white;
+}
+
+.sobre-section__lead {
+    font-size: 1.0625rem;
+    color: $color-text-muted;
+    max-width: 42em;
+    margin-bottom: 32px;
+    line-height: 1.65;
+    @media (max-width: 768px) {
+        margin-bottom: 28px;
+    }
+}
+
+.sobre-section--accent .sobre-section__lead {
+    color: rgba($color-white, 0.88);
+}
+
+.sobre-section__prose {
+    max-width: 42em;
+}
+
+.sobre-section__prose p {
+    font-size: 1.0625rem;
+    color: $color-text;
+    margin-bottom: 18px;
+    line-height: 1.65;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Com quem trabalhamos — cards com ícones
+.sobre-quem__lead {
+    max-width: 36em;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+        margin-bottom: 32px;
+    }
+}
+
+.sobre-quem__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 28px;
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.sobre-quem-card {
+    padding: 32px 28px;
+    background: $color-white;
+    border: 1px solid $color-gray;
+    border-radius: $radius;
+    transition: border-color $transition, box-shadow $transition, transform $transition;
+    &:hover {
+        border-color: rgba($color-base, 0.2);
+        box-shadow: 0 8px 28px rgba($color-base, 0.08);
+        transform: translateY(-3px);
+    }
+    @media (max-width: 768px) {
+        padding: 26px 22px;
+    }
+}
+
+.sobre-quem-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    color: $color-green;
+    background: rgba($color-green, 0.08);
+    border-radius: $radius;
+}
+
+.sobre-quem-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $color-base;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.sobre-quem-card__text {
+    font-size: 0.9375rem;
+    color: $color-text-muted;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sobre-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 42em;
+}
+
+.sobre-list__item {
+    padding: 24px 0;
+    border-bottom: 1px solid $color-gray;
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.sobre-list__label {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $color-base;
+    margin-bottom: 6px;
+}
+
+.sobre-list__text {
+    font-size: 1rem;
+    color: $color-text-muted;
+    line-height: 1.6;
+}
+
+.sobre-list--compact {
+    max-width: 42em;
+}
+
+.sobre-list--compact li {
+    position: relative;
+    padding: 12px 0 12px 24px;
+    font-size: 1rem;
+    color: $color-text;
+    line-height: 1.6;
+    border-bottom: none;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 1.1em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-green;
+    }
+}
+
+.sobre-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 32px;
+    margin-top: 24px;
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.sobre-pillar {
+    padding: 28px 24px;
+    background: $color-white;
+    border: 1px solid $color-gray;
+    border-radius: $radius;
+    transition: border-color $transition, box-shadow $transition;
+    &:hover {
+        border-color: rgba($color-base, 0.2);
+        box-shadow: 0 4px 20px rgba($color-base, 0.06);
+    }
+    @media (max-width: 768px) {
+        padding: 22px 20px;
+    }
+}
+
+.sobre-pillar__num {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $color-green;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+.sobre-pillar__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $color-base;
+    margin-bottom: 10px;
+}
+
+.sobre-pillar__text {
+    font-size: 0.9375rem;
+    color: $color-text-muted;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sobre-quote {
+    max-width: 32em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-quote__text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $color-white;
+    line-height: 1.5;
+    margin: 0;
+    @media (max-width: 768px) {
+        font-size: 1.125rem;
+    }
+}
+
+.sobre-cta__text {
+    font-size: 0.9375rem;
+    color: $color-text-muted;
+    margin-bottom: 24px;
+}
+
+.sobre-section__cta {
+    margin-top: 28px;
+    margin-bottom: 0;
+}
+
+.sobre-section--cta .sobre-section__cta {
+    margin-top: 20px;
+}

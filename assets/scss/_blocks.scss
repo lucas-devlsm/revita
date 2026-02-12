@@ -1,0 +1,59 @@
+.block {
+    padding: 56px 0;
+    @media (max-width: 640px) {
+        padding: 40px 0;
+    }
+}
+
+.block--alt {
+    background: #f8f9fa;
+}
+
+.block__title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-text-muted;
+    margin-bottom: 20px;
+}
+
+.block__text {
+    font-size: 1rem;
+    color: $color-text;
+    max-width: 42em;
+    margin-bottom: 12px;
+    line-height: 1.65;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.block__link {
+    margin-top: 20px;
+    font-size: 0.9375rem;
+}
+
+.block__contact {
+    margin-bottom: 4px;
+    font-size: 1rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.services-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services-list li {
+    font-size: 1rem;
+    color: $color-text;
+    padding: 10px 0;
+    border-bottom: 1px solid $color-gray;
+    &:first-child {
+        padding-top: 0;
+    }
+}

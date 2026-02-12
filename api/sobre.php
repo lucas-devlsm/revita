@@ -85,7 +85,7 @@
                 <li>Captação, M&A e estratégia de saída — preparação e execução</li>
             </ul>
             <p class="sobre-section__cta">
-                <a href="servicos" class="link-arrow">Ver todos os serviços</a>
+                <a href="/servicos" class="link-arrow">Ver todos os serviços</a>
             </p>
         </div>
     </section>
@@ -94,7 +94,7 @@
         <div class="container">
             <p class="sobre-cta__text">Atendimento sob confidencialidade.</p>
             <p class="sobre-section__cta">
-                <a href="contato" class="btn btn--primary">Falar com a Revita</a>
+                <a href="/contato" class="btn btn--primary">Falar com a Revita</a>
             </p>
         </div>
     </section>

@@ -19,21 +19,21 @@
                     <p class="hero__lead">A REVITA atua ao lado de donos, CEOs e CFOs em decisões estratégicas e financeiras, quando o contexto exige estrutura, clareza e responsabilidade.</p>
                     <p class="hero__sub">Organizamos o cenário, apoiamos a tomada de decisão e acompanhamos a execução quando necessário.</p>
                     <div class="hero__cta">
-                        <a href="contato" class="btn btn--primary">Falar com a Revita</a>
-                        <a href="servicos" class="hero__cta-secondary">Ver serviços</a>
+                        <a href="/contato" class="btn btn--primary">Falar com a Revita</a>
+                        <a href="/servicos" class="hero__cta-secondary">Ver serviços</a>
                     </div>
                 </div>
                 <div class="hero__right">
                     <div class="hero__cards">
-                        <a href="diagnostico-empresarial" class="hero-card">
+                        <a href="/diagnostico-empresarial" class="hero-card">
                             <span class="hero-card__title">Diagnóstico Empresarial</span>
                             <span class="hero-card__desc">Análise financeira, operacional e estratégica com foco em clareza.</span>
                         </a>
-                        <a href="reestruturacao-financeira" class="hero-card">
+                        <a href="/reestruturacao-financeira" class="hero-card">
                             <span class="hero-card__title">Reestruturação Financeira</span>
                             <span class="hero-card__desc">Organização de caixa, dívidas e relacionamento com credores.</span>
                         </a>
-                        <a href="turnaround" class="hero-card">
+                        <a href="/turnaround" class="hero-card">
                             <span class="hero-card__title">Turnaround</span>
                             <span class="hero-card__desc">Apoio direto à mudança de rota em contextos de crise.</span>
                         </a>
@@ -67,7 +67,7 @@
                     <span class="section__label">Atuação</span>
                     <h2 class="section__title atuacao__title">Quando decisões não podem ser adiadas</h2>
                     <p class="atuacao__lead">Atuamos em situações em que decisões não podem ser adiadas.</p>
-                    <p class="atuacao__cta"><a href="contato" class="btn btn--atuacao">Falar com a Revita</a></p>
+                    <p class="atuacao__cta"><a href="/contato" class="btn btn--atuacao">Falar com a Revita</a></p>
                 </div>
             </div>
         </div>
@@ -99,38 +99,38 @@
             <p class="section__intro section--servicos__intro">Conheça nossas áreas de atuação.</p>
             <ul class="servicos-cards">
                 <li class="servicos-cards__item">
-                    <a href="diagnostico-empresarial" class="servicos-card">
+                    <a href="/diagnostico-empresarial" class="servicos-card">
                         <span class="servicos-card__title">Diagnóstico Empresarial</span>
                         <span class="servicos-card__desc">Análise financeira, operacional e estratégica com foco em clareza e priorização.</span>
                     </a>
                 </li>
                 <li class="servicos-cards__item">
-                    <a href="reestruturacao-financeira" class="servicos-card">
+                    <a href="/reestruturacao-financeira" class="servicos-card">
                         <span class="servicos-card__title">Reestruturação Financeira</span>
                         <span class="servicos-card__desc">Organização de caixa, dívidas, capital de giro e relacionamento com credores.</span>
                     </a>
                 </li>
                 <li class="servicos-cards__item">
-                    <a href="turnaround" class="servicos-card">
+                    <a href="/turnaround" class="servicos-card">
                         <span class="servicos-card__title">Turnaround</span>
                         <span class="servicos-card__desc">Apoio direto à mudança de rota em contextos de crise ou estagnação.</span>
                     </a>
                 </li>
                 <li class="servicos-cards__item">
-                    <a href="governanca-sucessao" class="servicos-card">
+                    <a href="/governanca-sucessao" class="servicos-card">
                         <span class="servicos-card__title">Governança & Sucessão</span>
                         <span class="servicos-card__desc">Estruturação da tomada de decisão e transições societárias.</span>
                     </a>
                 </li>
                 <li class="servicos-cards__item">
-                    <a href="captacao-estrategia-saida" class="servicos-card">
+                    <a href="/captacao-estrategia-saida" class="servicos-card">
                         <span class="servicos-card__title">Captação & Estratégia de Saída</span>
                         <span class="servicos-card__desc">Preparação para bancos, fundos, M&A ou crescimento estruturado.</span>
                     </a>
                 </li>
             </ul>
             <p class="section__link-wrap section--servicos__cta">
-                <a href="servicos" class="btn btn--outline">Ver todos os serviços</a>
+                <a href="/servicos" class="btn btn--outline">Ver todos os serviços</a>
             </p>
         </div>
     </section>
@@ -144,7 +144,7 @@
                     <h2 class="section__title section__title--light">Atendimento sob confidencialidade</h2>
                     <p class="contato-home__text">Entre em contato para uma conversa inicial. Atendimento sob confidencialidade.</p>
                     <div class="contato-home__cta">
-                        <a href="contato" class="btn btn--light">Falar com a Revita</a>
+                        <a href="/contato" class="btn btn--light">Falar com a Revita</a>
                     </div>
                 </div>
                 <div class="contato-home__right">

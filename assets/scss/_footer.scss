@@ -1,0 +1,127 @@
+.footer {
+    margin-top: auto;
+    background: $color-white;
+}
+
+.footer__top {
+    padding: 64px 0 40px;
+    border-top: 1px solid $color-gray;
+    background: $color-gray-bg;
+    @media (max-width: 768px) {
+        padding: 48px 0 32px;
+    }
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 48px 40px;
+    align-items: start;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.footer__brand {
+    max-width: 260px;
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 14px;
+    transition: opacity $transition;
+    &:hover {
+        opacity: 0.88;
+    }
+}
+
+.footer__logo-img {
+    display: block;
+    height: 130px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer__tagline {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+    line-height: 1.5;
+}
+
+.footer__nav-title,
+.footer__contact .footer__nav-title {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $color-text-muted;
+    margin-bottom: 18px;
+}
+
+.footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin-bottom: 12px;
+    }
+    a {
+        font-size: 0.9375rem;
+        color: $color-text-muted;
+        transition: color $transition;
+        &:hover {
+            color: $color-base;
+        }
+    }
+}
+
+.footer__confidencial {
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+    margin-bottom: 14px;
+    line-height: 1.45;
+}
+
+.footer__email,
+.footer__site {
+    display: block;
+    font-size: 0.9375rem;
+    margin-bottom: 8px;
+    color: $color-text-muted;
+    transition: color $transition;
+    &:hover {
+        color: $color-base;
+    }
+}
+
+.footer__linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9375rem;
+    margin-top: 4px;
+    color: $color-text-muted;
+    transition: color $transition;
+    &:hover {
+        color: $color-base;
+    }
+}
+
+.footer__linkedin-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.footer__bottom {
+    padding: 20px 0;
+    background: $color-white;
+    border-top: 1px solid $color-gray;
+}
+
+.footer__copy {
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+    margin: 0;
+}

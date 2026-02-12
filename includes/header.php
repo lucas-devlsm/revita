@@ -1,41 +1,35 @@
-<header class="header">
-    <div class="container">
-        <div class="header__content">
-            <a href="./" class="header__logo">
-                <img src="assets/img/logo.png" alt="Palladium - Planejamento Patrimonial Familiar">
-            </a>
-            
-            <nav class="header__nav" id="headerNav">
-                <div class="header__nav-header">
-                    <a href="./" class="header__logo-mobile">
-                        <img src="assets/img/logo.png" alt="Palladium - Planejamento Patrimonial Familiar">
-                    </a>
-                    <button class="header__close" id="mobileClose" aria-label="Fechar menu">
-                        <span>×</span>
-                    </button>
-                </div>
-                <ul class="header__menu">
-                    <li><a href="./" class="header__link">Início</a></li>
-                    <li><a href="/sobre" class="header__link">Sobre Nós</a></li>
-                    <li class="header__dropdown">
-                        <a href="/#solucoes" class="header__link">Soluções <span class="header__arrow">▼</span></a>
-                        <ul class="header__submenu">
-                            <li><a href="/holding-familiar" class="header__sublink">Holding Familiar</a></li>
-                            <li><a href="/sessao-viabilidade" class="header__sublink">Sessão de Viabilidade</a></li>
-                            <li><a href="/seminario" class="header__sublink">Seminário</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/#materiais" class="header__link">Materiais</a></li>
-                    <li><a href="/contato" class="header__link header__link--cta">Contato</a></li>
-                </ul>
-            </nav>
-            
-            <button class="header__mobile-toggle" id="mobileToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<header class="header" id="header">
+    <div class="header__bar">
+        <div class="container container--header">
+            <div class="header__inner">
+                <a href="./" class="header__logo" aria-label="REVITA - Página inicial">
+                    <img src="assets/img/logo.png" alt="REVITA" class="header__logo-img" width="120" height="40">
+                </a>
+                <nav class="header__nav" id="headerNav" aria-label="Menu principal">
+                    <ul class="header__menu">
+                        <li><a href="./" class="header__link<?php echo (!isset($currentPage) || $currentPage === 'home') ? ' header__link--active' : ''; ?>">Home</a></li>
+                        <li><a href="sobre" class="header__link<?php echo (isset($currentPage) && $currentPage === 'sobre') ? ' header__link--active' : ''; ?>">Sobre</a></li>
+                        <li><a href="especialistas" class="header__link<?php echo (isset($currentPage) && $currentPage === 'especialistas') ? ' header__link--active' : ''; ?>">Especialistas</a></li>
+                        <li class="header__dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="servicos" class="header__link header__link--dropdown<?php echo (isset($currentPage) && $currentPage === 'servicos') ? ' header__link--active' : ''; ?>" id="servicosTrigger">Serviços</a>
+                            <ul class="header__submenu" id="servicosSubmenu" aria-label="Submenu Serviços">
+                                <li><a href="diagnostico-empresarial" class="header__sublink">Diagnóstico Empresarial</a></li>
+                                <li><a href="reestruturacao-financeira" class="header__sublink">Reestruturação Financeira</a></li>
+                                <li><a href="turnaround" class="header__sublink">Turnaround</a></li>
+                                <li><a href="governanca-sucessao" class="header__sublink">Governança & Sucessão</a></li>
+                                <li><a href="captacao-estrategia-saida" class="header__sublink">Captação & Estratégia de Saída</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contato" class="header__link header__link--cta<?php echo (isset($currentPage) && $currentPage === 'contato') ? ' header__link--active' : ''; ?>">Contato</a></li>
+                    </ul>
+                </nav>
+                <button class="header__toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="headerNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </div>
 </header>
-
+<div class="header-overlay" id="headerOverlay" aria-hidden="true"></div>

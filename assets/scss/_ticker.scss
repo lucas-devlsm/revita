@@ -1,0 +1,58 @@
+// Ticker bar — texto em loop com ícones entre seções
+.ticker-bar {
+    overflow: hidden;
+    padding: 18px 0;
+    background: $color-base;
+    border-top: 1px solid rgba($color-white, 0.08);
+    border-bottom: 1px solid rgba($color-white, 0.08);
+}
+
+.ticker-bar__track {
+    overflow: hidden;
+    width: 100%;
+}
+
+.ticker-bar__content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: max-content;
+    gap: 0;
+    animation: tickerScroll 35s linear infinite;
+}
+
+.ticker-bar__content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes tickerScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.ticker-bar__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    padding: 0 28px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: rgba($color-white, 0.92);
+    white-space: nowrap;
+    border-right: 1px solid rgba($color-white, 0.12);
+    &:last-child {
+        border-right: none;
+    }
+    @media (max-width: 768px) {
+        padding: 0 20px;
+        font-size: 0.875rem;
+        gap: 8px;
+    }
+}
+
+.ticker-bar__icon {
+    flex-shrink: 0;
+    opacity: 0.9;
+    color: $color-green-light;
+}
